@@ -1,3 +1,11 @@
+#LEGEND
+# X for placing ship and hitting of battleship
+# '' for available space
+# '_' for missed shots
+#
+#
+
+
 from random import randint
 
 #Board for holding ship locations
@@ -20,11 +28,23 @@ letters_to_numbers = {
     'L': 11  
 }
 
-def board():
-    pass
+def print_board(board):
+    print('    A B C D E F G H I J K L')
+    print('    +-+-+-+-+-+-+-+-+-+-+-+')
+    row_number = 1
+    for row in board:
+        print("%d|%s|" % (row_number, "|".join(row)))
+        row_number += 1
 
-def create_ships():
-    pass
+def create_ships(board):
+    """
+    Playing against the computer - creates 5 ships
+    """
+    for ship in range(5):
+        ship_row, ship_column = randint(0, 11), randint(0, 11)
+        while board[ship_row][ship_column] = "X":
+            ship_row, ship_column = randint(0, 11), randint(0, 11)
+        board[ship_row][ship_column] = 'X'
 
 def get_ship_location():
     pass
