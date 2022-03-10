@@ -41,10 +41,10 @@ def create_ships(board):
     Playing against the computer - creates 5 ships
     """
     for ship in range(5):
-        ship_row, ship_column = randint(0, 11), randint(0, 11)
-        while board[ship_row][ship_column] = "X":
-            ship_row, ship_column = randint(0, 11), randint(0, 11)
-        board[ship_row][ship_column] = 'X'
+        ship_row, ship_column = randint(0,7), randint(0,7)
+        while board[ship_row][ship_column] == "X":
+            ship_row, ship_column = get_ship_location()
+        board[ship_row][ship_column] = "X"
 
 def get_ship_location():
     pass
