@@ -17,5 +17,21 @@ letters_to_numbers = {
     'I': 8,
     'J': 9,
     'K': 10,
-    'L': 11
-    }
+    'L': 11  
+}
+
+def board():
+    pass
+
+def create_ships():
+    pass
+
+def get_ship_location():
+    pass
+
+def count_hit_ships():
+    pass
+
+create_ships()
+turns = 10 
+while turns > 0:
