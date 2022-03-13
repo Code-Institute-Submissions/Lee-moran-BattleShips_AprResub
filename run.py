@@ -34,7 +34,7 @@ def print_board(board):
 
 def create_ships(board):
     """
-    Playing against the computer - creates 6 ships
+    Playing against the computer - comp creates 6 ships
     """
     for ship in range(6):
         ship_row, ship_column = randint(0,8), randint(0,8)
@@ -47,11 +47,11 @@ def get_ship_location():
     row = input("\nEnter the row of the ship: ").upper()
     while row not in "123456789":
         print('Not an appropriate choice, please select a valid row')
-        row = input("Enter ship row from 1-9: ").upper()
-    column = input("Enter a ship column from A-L: ").upper()
+        row = input("Please enter ship row from 1-9: ").upper()
+    column = input("Enter a ship column: ").upper()
     while column not in "ABCDEFGHI":
-        print('Please enter a valid column')
-        column = input("Please enter a ship column of A-L: ").upper()
+        print('Not an appropriate choice, please enter a valid column')
+        column = input("Please Enter a ship column of A-I: ").upper()
     return int(row) - 1, letters_to_numbers[column]
 
 
@@ -95,5 +95,5 @@ while turns > 0:
         break
     print("You have " + str(turns) + " turns left")
     if turns == 0:
-        print("You ran out of turns")
+        print("You ran out of bullets")
         break

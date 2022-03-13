@@ -29,7 +29,7 @@ if you run out of bullets you loose
 - A MISS is identified by an -
 
 
-Input your shot eg (5,B) note the capitale letters.
+Input your shot eg (5,B) note the capitale letter for columns.
 
 
 
