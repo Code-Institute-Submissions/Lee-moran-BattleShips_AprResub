@@ -15,7 +15,23 @@ You have 12 bullets to located and Hit the battleships.
 if you hit all 6 you win 
 if you run out of bullets you loose 
 
-## Welcome Home page 
+## WELCOME:
+
+## HOW TO PLAY:
+- vs the computer
+- no. of bullets/turn to idenify and sink ships
+- Selecting a row first between 1-9
+- Select a column A-J
+- Grid area 9 x 9
+- Sink all 6 random postioned ships to win.
+- Lose if all ships arent sunk 
+- A HIT is identified by an X 
+- A MISS is identified by an -
+
+
+Input your shot eg (5,B) note the capitale letters.
+
+
 
 ## Creating the Heroku app deployment
 

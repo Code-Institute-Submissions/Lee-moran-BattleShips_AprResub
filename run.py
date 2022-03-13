@@ -44,11 +44,11 @@ def create_ships(board):
 
 
 def get_ship_location():
-    row = input("Enter the row of the ship: ").upper()
+    row = input("\nEnter the row of the ship: ").upper()
     while row not in "123456789":
         print('Not an appropriate choice, please select a valid row')
-        row = input("Enter the row of the ship: ").upper()
-    column = input("Please enter a ship column of A-L: ").upper()
+        row = input("Enter ship row from 1-9: ").upper()
+    column = input("Enter a ship column from A-L: ").upper()
     while column not in "ABCDEFGHI":
         print('Please enter a valid column')
         column = input("Please enter a ship column of A-L: ").upper()
@@ -77,6 +77,7 @@ while turns > 0:
     A Miss will identify as an -
     '''
     print('Welcome to the 80s style Battleship Game\n')
+    print("Object of the game is to sink 6 ships\n")
     print_board(GUESS_BOARD)
     row, column = get_ship_location()
     if GUESS_BOARD[row][column] == '-':
