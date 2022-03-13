@@ -67,6 +67,7 @@ def count_hit_ships(board):
                 count += 1
     return count
 
+
 create_ships(HIDDEN_BOARD)
 turns = 12 
 while turns > 0:
@@ -80,7 +81,7 @@ while turns > 0:
     row, column = get_ship_location()
     if GUESS_BOARD[row][column] == '-':
         print("You already guessed that")
-    elif HIDDEN_BOARD [row][column] == 'X':
+    elif HIDDEN_BOARD[row][column] == 'X':
         print("HIT")
         GUESS_BOARD[row][column] = "X"
         turns -= 1
