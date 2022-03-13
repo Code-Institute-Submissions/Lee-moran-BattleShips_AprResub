@@ -1,12 +1,9 @@
+from random import randint
+
 # LEGEND
 #  X for placing ship and hitting of battleship
 # '' for available space
-# '_' for missed shots
-#
-#
-
-
-from random import randint
+# '-' for missed shots
 
 # Board for holding ship locations
 HIDDEN_BOARD = [[" "] * 9 for x in range(9)]
@@ -60,7 +57,8 @@ def get_ship_location():
 
 def count_hit_ships(board):
     """
-    Counts the amount of ships that have been hit.
+    Counts the amount of ships that have been hit
+    A hit Ship will be identifyed By an X.
     """
     count = 0
     for row in board:
@@ -70,16 +68,20 @@ def count_hit_ships(board):
     return count
 
 create_ships(HIDDEN_BOARD)
-print(HIDDEN_BOARD)
 turns = 12 
 while turns > 0:
+    """
+    We have 12 turns to find 6 ships..
+    A HIT will identify as an X
+    A Miss will identify as an -
+    """
     print('Welcome to the classic Battleship Game\n')
     print_board(GUESS_BOARD)
     row, column = get_ship_location()
     if GUESS_BOARD[row][column] == '-':
         print("You already guessed that")
     elif HIDDEN_BOARD [row][column] == 'X':
-        print("HIT a battleship")
+        print("HIT")
         GUESS_BOARD[row][column] = "X"
         turns -= 1
     else:
@@ -87,7 +89,7 @@ while turns > 0:
         GUESS_BOARD[row][column] = "-"   
         turns -= 1     
     if count_hit_ships(GUESS_BOARD) == 6:
-        print("You win!")
+        print("You WIN!")
         break
     print("You have " + str(turns) + " turns left")
     if turns == 0:
