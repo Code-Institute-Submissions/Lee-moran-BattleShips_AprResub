@@ -19,7 +19,7 @@ letters_to_numbers = {
     'F': 5,
     'G': 6,
     'H': 7,
-    'I': 8  
+    'I': 8
 }
 
 
@@ -37,7 +37,7 @@ def create_ships(board):
     Playing against the computer - comp creates 6 ships
     """
     for ship in range(6):
-        ship_row, ship_column = randint(0,8), randint(0,8)
+        ship_row, ship_column = randint(0, 8), randint(0, 8)
         while board[ship_row][ship_column] == "X":
             ship_row, ship_column = get_ship_location()
         board[ship_row][ship_column] = "X"
@@ -69,7 +69,7 @@ def count_hit_ships(board):
 
 
 create_ships(HIDDEN_BOARD)
-turns = 12 
+turns = 12
 while turns > 0:
     '''
     We have 12 turns to find 6 ships..
@@ -88,8 +88,8 @@ while turns > 0:
         turns -= 1
     else:
         print("MISS!")
-        GUESS_BOARD[row][column] = "-"   
-        turns -= 1     
+        GUESS_BOARD[row][column] = "-"
+        turns -= 1
     if count_hit_ships(GUESS_BOARD) == 6:
         print("You WIN!")
         break
