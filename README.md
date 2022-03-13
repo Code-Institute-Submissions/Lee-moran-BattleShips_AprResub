@@ -1,31 +1,33 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome Lee-moran,
+80'S STYLE BATTLESHIP
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+Python challege to create a python game.
+about the game and the requirements
 
-## Reminders
+This program is a computerized version of the original board game battleships, based inside a mock terminal deployed via Heroku.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+As a child of the 90's, I used the Milton Bradley game version over the more modern Hasbro rendition. One can find more info on the rules and the history of the game here on Wikipedia. https://en.wikipedia.org/wiki/Battleship_(game). As this is my game i made the grid bigger and added more ships to destroy.
 
-## Creating the Heroku app
+Object of the game is to sink 6 random computer generated ships from the 9 x 9 grid.
+Single-player version against a computerized player.
+You have 12 bullets to located and Hit the battleships.
+if you hit all 6 you win 
+if you run out of bullets you loose 
+
+## Welcome Home page 
+
+## Creating the Heroku app deployment
 
 When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
 1. `heroku/python`
 2. `heroku/nodejs`
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+## Creds
+credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 
 Connect your GitHub repository and deploy as normal.
 
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+## Testing 
+caps for rows ABCDEFGHI

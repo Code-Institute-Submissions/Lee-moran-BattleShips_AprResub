@@ -71,12 +71,12 @@ def count_hit_ships(board):
 create_ships(HIDDEN_BOARD)
 turns = 12 
 while turns > 0:
-    """
+    '''
     We have 12 turns to find 6 ships..
     A HIT will identify as an X
     A Miss will identify as an -
-    """
-    print('Welcome to the classic Battleship Game\n')
+    '''
+    print('Welcome to the 80s style Battleship Game\n')
     print_board(GUESS_BOARD)
     row, column = get_ship_location()
     if GUESS_BOARD[row][column] == '-':
