@@ -2,7 +2,7 @@ from random import randint
 
 # LEGEND
 #  X for placing ship and hitting of battleship
-# ' ' for available space
+# | | for available space
 # '-' for missed shots
 
 # Board for holding ship locations
@@ -24,7 +24,7 @@ letters_to_numbers = {
 
 
 def print_board(board):
-    print('  A B C D E F G H I')
+    print('\u001B[32m  A B C D E F G H I \u001B[0m')
     print('  +-+-+-+-+-+-+-+-+')
     row_number = 1
     for row in board:
@@ -63,20 +63,21 @@ def count_hit_ships(board):
     count = 0
     for row in board:
         for column in row:
-            if column == "X":
+            if column == "x":
                 count += 1
     return count
 
 
 create_ships(HIDDEN_BOARD)
-turns = 20
+turns = 30
 while turns > 0:
     '''
-    We have 20 turns to find 6 ships..
+    We have 30 turns to find 6 ships..
     A HIT will identify as an X
     A Miss will identify as an -
     '''
-    print("""/ 
+    print("""/
+    \u001B[32m 
    ___       _   _   _           _     _         
   / __\ __ _| |_| |_| | ___  ___| |__ (_)_ __    
  /__\/// _` | __| __| |/ _ \/ __| '_ \| | '_ \   
@@ -88,29 +89,28 @@ while turns > 0:
  / _ \| | | |/ __|  / __| |/ _` / __/ __| |/ __| 
 | (_) | |_| |\__ \ | (__| | (_| \__ \__ \ | (__  
  \___/ \___/ |___/  \___|_|\__,_|___/___/_|\___| 
-                                                 
+\u001B[0m                                               
 """)
-    print("Object of the game is to sink 6 ships with 20 bullets\n")
-    print("Legend:")
-    print(" X for sucessful hit of battleship")
-    print("' ' for available space (water)")
-    print("'-' for missed shots\n")
+    print("\033[0;95m SINK ALL 6 SHIPS USING 20 BULLETS \n \u001B[0m")
+    print(" \033[0;91m X \u001B[0m   sucessful hit of battleship")
+    print(" | |   available space (water)")
+    print("\033[0;93m  - \u001B[0m   missed shots\n")
     print_board(GUESS_BOARD)
     row, column = get_ship_location()
     if GUESS_BOARD[row][column] == '-':
         print("You already guessed that")
     elif HIDDEN_BOARD[row][column] == 'X':
         print("HIT")
-        GUESS_BOARD[row][column] = "X"
+        GUESS_BOARD[row][column] = "\033[0;91mX\u001B[0m"
         turns -= 1
     else:
         print("MISS!")
-        GUESS_BOARD[row][column] = "-"
+        GUESS_BOARD[row][column] = "\033[0;93m-\u001B[0m"
         turns -= 1
     if count_hit_ships(GUESS_BOARD) == 6:
         print("You WIN!")
         break
     print("You have " + str(turns) + " turns left")
     if turns == 0:
-        print("You ran out of bullets")
+        print("You ran out of bullets, GAME OVER")
         break
