@@ -2,7 +2,7 @@ from random import randint
 
 # LEGEND
 #  X for placing ship and hitting of battleship
-# '' for available space
+# ' ' for available space
 # '-' for missed shots
 
 # Board for holding ship locations
@@ -69,15 +69,32 @@ def count_hit_ships(board):
 
 
 create_ships(HIDDEN_BOARD)
-turns = 12
+turns = 20
 while turns > 0:
     '''
-    We have 12 turns to find 6 ships..
+    We have 20 turns to find 6 ships..
     A HIT will identify as an X
     A Miss will identify as an -
     '''
-    print('Welcome to the 80s style Battleship Game\n')
-    print("Object of the game is to sink 6 ships\n")
+    print("""/ 
+   ___       _   _   _           _     _         
+  / __\ __ _| |_| |_| | ___  ___| |__ (_)_ __    
+ /__\/// _` | __| __| |/ _ \/ __| '_ \| | '_ \   
+/ \/  \ (_| | |_| |_| |  __/\__ \ | | | | |_) |  
+\_____/\__,_|\__|\__|_|\___||___/_| |_|_| .__/   
+                                        |_|      
+  ___   ___  _           _               _       
+ ( _ ) / _ \( )__    ___| | __ _ ___ ___(_) ___  
+ / _ \| | | |/ __|  / __| |/ _` / __/ __| |/ __| 
+| (_) | |_| |\__ \ | (__| | (_| \__ \__ \ | (__  
+ \___/ \___/ |___/  \___|_|\__,_|___/___/_|\___| 
+                                                 
+""")
+    print("Object of the game is to sink 6 ships with 20 bullets\n")
+    print("Legend:")
+    print(" X for sucessful hit of battleship")
+    print("' ' for available space (water)")
+    print("'-' for missed shots\n")
     print_board(GUESS_BOARD)
     row, column = get_ship_location()
     if GUESS_BOARD[row][column] == '-':
