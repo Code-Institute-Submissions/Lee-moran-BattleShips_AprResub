@@ -34,9 +34,9 @@ def print_board(board):
 
 def create_ships(board):
     """
-    Playing against the computer - comp creates 6 ships
+    Playing against the computer - comp creates 9 ships
     """
-    for ship in range(6):
+    for ship in range(9):
         ship_row, ship_column = randint(0, 8), randint(0, 8)
         while board[ship_row][ship_column] == "X":
             ship_row, ship_column = get_ship_location()
@@ -72,7 +72,7 @@ create_ships(HIDDEN_BOARD)
 turns = 30
 while turns > 0:
     '''
-    We have 30 turns to find 6 ships..
+    We have 30 turns to find 8 ships..
     A HIT will identify as an X
     A Miss will identify as an -
     '''
@@ -91,10 +91,10 @@ while turns > 0:
  \___/ \___/ |___/  \___|_|\__,_|___/___/_|\___| 
 \u001B[0m                                               
 """)
-    print("\033[0;95m SINK ALL 6 SHIPS USING 20 BULLETS \n \u001B[0m")
-    print(" \033[0;91m X \u001B[0m   sucessful hit of battleship")
-    print(" | |   available space (water)")
-    print("\033[0;93m  - \u001B[0m   missed shots\n")
+    print("\033[0;95m SINK ALL 9 SHIPS USING 30 BULLETS \n \u001B[0m")
+    print(" \033[0;91m X \u001B[0m   Sucessful hit of battleship")
+    print(" | |   Available space (water)")
+    print("\033[0;93m  - \u001B[0m   Missed shots\n")
     print_board(GUESS_BOARD)
     row, column = get_ship_location()
     if GUESS_BOARD[row][column] == '-':

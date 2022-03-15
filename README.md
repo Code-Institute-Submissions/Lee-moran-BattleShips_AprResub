@@ -21,11 +21,11 @@ if you run out of bullets you loose and GAME OVER
 - Selecting a row first between 1-9
 - Select a column A-J
 - Grid area 9 x 9
-- Sink all 6 random postioned ships to win.
-- Lose if all ships arent sunk 
+- Sink all 9 random postioned ships to win.
+- Lose if all ships arent sunk or run out of bullets
 - A HIT is identified by an X 
 - A MISS is identified by an -
-- Water represented by ' '
+- Water represented by | |
 
 Input your shot eg (5,B) note the capitale letter for columns.
 
@@ -94,7 +94,7 @@ This will take a few seconds to complete while Heroku builds the app.
 
 - 13: A message will appear informing you that the app was successfully deployed and a View button will bring you to the live site.
 
-Live link:
+Live link: https://battleship80s.herokuapp.com/
 
 Connect your GitHub repository and deploy as normal.
 
