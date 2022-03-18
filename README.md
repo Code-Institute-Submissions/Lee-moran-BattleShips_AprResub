@@ -14,6 +14,7 @@ if you hit all 6 you win
 if you run out of bullets you loose and GAME OVER
 
 ## WELCOME:
+<img width="375" alt="Battleships" src="https://user-images.githubusercontent.com/92300148/158437334-753735d7-9981-4962-a3d9-fdb99e69cecf.png">
 
 ## HOW TO PLAY:
 - vs the computer
@@ -29,6 +30,8 @@ if you run out of bullets you loose and GAME OVER
 
 Input your shot eg (5,B) note the capitale letter for columns.
 
+<img width="216" alt="GRID" src="https://user-images.githubusercontent.com/92300148/159030593-21bd2334-5eab-4022-8807-fd9ab3f3aec9.png">
+
 ## Design
 - Color Scheme
 Not required for the scope of this project.
@@ -36,25 +39,23 @@ However i added some color to enhance the visibility of the game
 Used https://stackoverflow.com/questions/5762491/how-to-print-color-in-console-using-system-out-println
 to apply colors to the ptint statment.
 
-- Feel
+### Feel
 Wanted to give the game that retro feel as its a terminal game.
 With it being inspired by the 80s, the user is playing against the computer.
 Trying to guess where the computer has placed 6 ships hidden.
 
 
-- ICONS
-A HIT is identified by an X 
-A MISS is identified by an -
-Water represented by ' '
-X Hit Red in color 
-Miss Yellow in color
+### ICONS
+- A HIT is identified by an X 
+- A MISS is identified by an -
+- Water represented by | |
+- X Hit Red in color 
+- Miss Yellow in color
 
-Screenshot icons 
+<img width="276" alt="Icons" src="https://user-images.githubusercontent.com/92300148/158437546-5ca3584a-f219-4721-bd72-7e52d3a25f09.png">
 
-- LAYOUT
+### LAYOUT
 My goal with the layout of the project, when displayed within the terminal, based on the retro feel and be easy to use.
-
-
 
 ## Creating the Heroku app deployment
 

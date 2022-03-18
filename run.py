@@ -10,6 +10,8 @@ HIDDEN_BOARD = [[" "] * 9 for x in range(9)]
 # Board for displaying hits and misses
 GUESS_BOARD = [[" "] * 9 for i in range(9)]
 
+SHIP = [2, 3, 4, 5, 6]
+
 letters_to_numbers = {
     'A': 0,
     'B': 1,
@@ -107,10 +109,11 @@ while turns > 0:
         print("MISS!")
         GUESS_BOARD[row][column] = "\033[0;93m-\u001B[0m"
         turns -= 1
-    if count_hit_ships(GUESS_BOARD) == 6:
+    if count_hit_ships(GUESS_BOARD) == 9:
         print("You WIN!")
         break
     print("You have " + str(turns) + " turns left")
     if turns == 0:
         print("You ran out of bullets, GAME OVER")
         break
+    
