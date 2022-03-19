@@ -1,11 +1,13 @@
 80'S STYLE BATTLESHIP
 
+<img width="812" alt="Run Game" src="https://user-images.githubusercontent.com/92300148/159112432-569047cc-f020-4242-8d11-9d699bc83e1c.png">
+
 Python challege to create a python game.
 about the game and the requirements
 
 This program is a computerized version of the original board game battleships, based inside a mock terminal deployed via Heroku.
 
-As a 90's child, I used the Milton Bradley game version and bring back the classic 80s style game. One can find more info on the rules and the history of the game here on Wikipedia. https://en.wikipedia.org/wiki/Battleship_(game). As this is my game i made the grid bigger and added more ships to destroy.
+As a 90's child, I used the Milton Bradley game version and bring back the classic 80s style game. One can find more info on the rules and the history of the game here on [Wikipedia](https://en.wikipedia.org/wiki/Battleship_(game)) As this is my game i made the grid bigger and added more ships to destroy.
 
 Object of the game is to sink 6 random computer generated ships from the 9 x 9 grid.
 Single-player version against a computerized player.
@@ -32,14 +34,16 @@ Input your shot eg (5,B) note the capitale letter for columns.
 
 <img width="216" alt="GRID" src="https://user-images.githubusercontent.com/92300148/159030593-21bd2334-5eab-4022-8807-fd9ab3f3aec9.png">
 
+<img width="156" alt="9 ships" src="https://user-images.githubusercontent.com/92300148/159032258-25121e12-6d4c-4126-8cd5-b8fe1dc754c0.png">
+
 ## Design
 - Color Scheme
 Not required for the scope of this project.
 However i added some color to enhance the visibility of the game
-Used https://stackoverflow.com/questions/5762491/how-to-print-color-in-console-using-system-out-println
+Used [Stackoverflow](https://stackoverflow.com/questions/5762491/how-to-print-color-in-console-using-system-out-println)
 to apply colors to the ptint statment.
 
-### Feel
+### FEEl
 Wanted to give the game that retro feel as its a terminal game.
 With it being inspired by the 80s, the user is playing against the computer.
 Trying to guess where the computer has placed 6 ships hidden.
@@ -97,19 +101,22 @@ This will take a few seconds to complete while Heroku builds the app.
 
 Live link: https://battleship80s.herokuapp.com/
 
+<img width="742" alt="game" src="https://user-images.githubusercontent.com/92300148/159032604-fb752d8d-1b5d-4ebd-9332-95721413d1a8.png">
+<img width="788" alt="Game 2" src="https://user-images.githubusercontent.com/92300148/159033009-b576263f-b6d6-4ea3-b067-5d572db7b1ac.png">
+
 Connect your GitHub repository and deploy as normal.
 
 ## Testing 
-Capitals for rows ABCDEFGHI
-Notice there was whitespacing issues all resolved.
-Whitespace warning when using http://patorjk.com/
+- Capitals for rows ABCDEFGHI
+- Notice there was whitespacing issues all resolved.
+- Whitespace warning when using http://patorjk.com/
 
 Testing
 Due to the nature of the project testing has been conducted throughout its entirety, mainly through the use of running the program in the terminal and ensuring i get the output intended. Evidence of this is clear within my commits, with various debugs recorded.
 
 Once at the finished point, limit testing has been conducted by myself, there is currently no reported issues that cause the game to break.
 
-Validator Testing
+## Validator Testing
 
 HTML - Not within project scope.
 CSS - Not within project scope.
@@ -117,8 +124,17 @@ JS - Not within project scope.
 Python - One error was found when passing through the PEP8 Validator tool - no new line at end of file.
 Lighthouse - Not within project scope
 
-## Reference
-Credit goes to Garrett Broughton - https://www.youtube.com/watch?v=tF1WRCrd_HQ&t=555s&ab_channel=KnowledgeMavens
-Please find a link to his video which was used in this project. 
+### Features left to implement
+There are no features left to implement from the initial scope of my project. I do have a few ideas on how to improve on this game and make it more advanced.
+- Placemnet of ships 
+- Ship sizes
+- Guess map that records your guesses 
+- Have your own board 
 
+## Reference
+Credit goes to Garrett Broughton - [YOUTUBE](https://www.youtube.com/watch?v=tF1WRCrd_HQ&t=555s&ab_channel=KnowledgeMavens)
+
+- [Stackoverflow](https://stackoverflow.com/questions/5762491/how-to-print-color-in-console-using-system-out-println)
+- [GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+- Code institute for deployment 
 
