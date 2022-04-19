@@ -23,6 +23,7 @@ letters_to_numbers = {
     'H': 7,
     'I': 8
 }
+# ------------ Board area 9x9 -------------- #
 
 
 def print_board(board):
@@ -32,6 +33,8 @@ def print_board(board):
     for row in board:
         print("%d|%s|" % (row_number, "|".join(row)))
         row_number += 1
+
+# ------------ ships location board area 9x9 -------------- #
 
 
 def create_ships(board):
@@ -43,6 +46,10 @@ def create_ships(board):
         while board[ship_row][ship_column] == "X":
             ship_row, ship_column = get_ship_location()
         board[ship_row][ship_column] = "X"
+
+
+# ------------ Ship location viva rows and cols -------------- #
+
 
 def get_ship_location():
     while True:
@@ -62,7 +69,11 @@ def get_ship_location():
         except KeyError:
             print('Enter a valid letter between A-H')
     return row, column
-    
+
+
+# ------------ ships hit -------------- #
+
+
 def count_hit_ships(board):
     """
     Counts the amount of ships that have been hit
@@ -74,6 +85,8 @@ def count_hit_ships(board):
             if column == "x":
                 count += 1
     return count
+
+# ------------ Rules  -------------- #
 
 
 create_ships(HIDDEN_BOARD)

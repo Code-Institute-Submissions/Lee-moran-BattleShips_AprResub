@@ -111,7 +111,7 @@ Connect your GitHub repository and deploy as normal.
 - Notice there was whitespacing issues all resolved.
 - Whitespace warning when using http://patorjk.com/
 
-Testing
+## Testing
 Due to the nature of the project testing has been conducted throughout its entirety, mainly through the use of running the program in the terminal and ensuring i get the output intended. Evidence of this is clear within my commits, with various debugs recorded.
 
 Once at the finished point, limit testing has been conducted by myself, there is currently no reported issues that cause the game to break.
@@ -124,7 +124,14 @@ JS - Not within project scope.
 Python - One error was found when passing through the PEP8 Validator tool - no new line at end of file.
 Lighthouse - Not within project scope
 
-### Features left to implement
+## Bugs
+- When enter is press instead of a valid row or column game crashes.
+<img width="627" alt="old code" src="https://user-images.githubusercontent.com/92300148/163981020-e9c9ee4f-3877-474d-a2b1-c735d623733b.png">
+
+- Fixed by creating while true statement and using try and except rule.
+<img width="529" alt="New code" src="https://user-images.githubusercontent.com/92300148/163981097-89e8018f-4fad-4b77-bdc0-93030e814510.png">
+
+## Features left to implement
 There are no features left to implement from the initial scope of my project. I do have a few ideas on how to improve on this game and make it more advanced.
 - Placemnet of ships 
 - Ship sizes
