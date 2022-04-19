@@ -44,7 +44,6 @@ def create_ships(board):
             ship_row, ship_column = get_ship_location()
         board[ship_row][ship_column] = "X"
 
-
 def get_ship_location():
     while True:
         try: 
@@ -61,10 +60,9 @@ def get_ship_location():
                 column = letters_to_numbers[column]
                 break
         except KeyError:
-            print('Enter a valid letter between A-I')
+            print('Enter a valid letter between A-H')
     return row, column
-
-
+    
 def count_hit_ships(board):
     """
     Counts the amount of ships that have been hit
