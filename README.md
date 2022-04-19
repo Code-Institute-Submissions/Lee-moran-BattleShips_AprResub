@@ -99,7 +99,10 @@ This will take a few seconds to complete while Heroku builds the app.
 
 - 13: A message will appear informing you that the app was successfully deployed and a View button will bring you to the live site.
 
+
 Live link: https://battleship80s.herokuapp.com/
+
+
 
 <img width="742" alt="game" src="https://user-images.githubusercontent.com/92300148/159032604-fb752d8d-1b5d-4ebd-9332-95721413d1a8.png">
 <img width="788" alt="Game 2" src="https://user-images.githubusercontent.com/92300148/159033009-b576263f-b6d6-4ea3-b067-5d572db7b1ac.png">
@@ -116,6 +119,40 @@ Due to the nature of the project testing has been conducted throughout its entir
 
 Once at the finished point, limit testing has been conducted by myself, there is currently no reported issues that cause the game to break.
 
+Isuues with heruko, since original deployment, Used a different method to deploy.
+
+Deploying your app to heroku
+
+1. Login to heroku and enter your details.
+command: heroku login -i
+
+2. Get your app name from heroku.
+command: heroku apps
+
+3. Set the heroku remote. (Replace <app_name> with your actual app name)
+command: ﻿heroku git:remote -a <app_name>
+
+4. Add, commit and push to github
+command: git add . && git commit -m "Deploy to Heroku via CLI"
+
+5. Push to both github and heroku
+command: git push origin main
+command: git push heroku main
+
+
+MFA/2FA enabled?
+1. Click on Account Settings (under the avatar menu)
+2. Scroll down to the API Key section and click Reveal. Copy the key.
+3. Enter the command: heroku_config , and enter your api key you copied when prompted
+4. Complete the steps above, if you see an input box at the top middle of the editor...
+a. enter your heroku username
+b. enter the api key you just copied
+
+Need to deploy again?
+You should just be able to add, commit and push, and if prompted enter your username and api key again.
+
+
+
 ## Validator Testing
 
 HTML - Not within project scope.
@@ -125,7 +162,7 @@ Python - One error was found when passing through the PEP8 Validator tool - no n
 Lighthouse - Not within project scope
 
 ## Bugs
-- When enter is press instead of a valid row or column game crashes.
+- When the enter key is press instead of a valid row or column game crashes.
 <img width="627" alt="old code" src="https://user-images.githubusercontent.com/92300148/163981020-e9c9ee4f-3877-474d-a2b1-c735d623733b.png">
 
 - Fixed by creating while true statement and using try and except rule.
