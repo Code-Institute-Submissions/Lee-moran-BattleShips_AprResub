@@ -54,20 +54,20 @@ def create_ships(board):
 def get_ship_location():
     while True:
         try: 
-            row = input("Enter the row of the ship: ")
+            row = input("Enter a valid row of the ship 1-9: ")
             if row in '123456789':
                 row = int(row) - 1
                 break
         except ValueError:
-            print('Enter a valid letter between A-I')
+            print('You have entered an Invalid input, Please  enter a number between 1-9')
     while True:
         try: 
-            column = input("Enter the column of the ship: ").upper()
+            column = input("Enter the column of the ship A-I: ").upper()
             if column in 'ABCDEFGHI':
                 column = letters_to_numbers[column]
                 break
         except KeyError:
-            print('Enter a valid letter between A-H')
+            print('You have entered an Invalid input, Please  enter a letter between A-I')
     return row, column
 
 
