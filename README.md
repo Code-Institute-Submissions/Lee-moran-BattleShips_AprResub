@@ -99,6 +99,33 @@ This will take a few seconds to complete while Heroku builds the app.
 
 - 13: A message will appear informing you that the app was successfully deployed and a View button will bring you to the live site.
 
+## Alternative way to Deploy VIA "CLI"
+
+There has been a security issue and heroku has disabled the ability to deploy via the dashboard, you will need to deploy via the terminal instead..
+These steps will help you...
+Deploying your app to heroku
+1. Login to heroku and enter your details.
+command: **heroku login -i**
+2. Get your app name from heroku.
+command:  **heroku apps**
+3. Set the heroku remote. (Replace <app_name> with your actual app name)
+command: **heroku git:remote -a <app_name>**
+4. Add, commit and push to github
+command: **git add . && git commit -m "Deploy to Heroku via CLI"**
+5. Push to both github and heroku
+command: **git push origin main**
+command: **git push heroku main**
+
+MFA/2FA enabled?
+1. Click on Account Settings (under the avatar menu)
+2. Scroll down to the API Key section and click Reveal. Copy the key.
+3. Enter the command:  heroku_config , and enter your api key you copied when prompted
+4. Complete the steps above, if you see an input box at the top middle of the editor...
+ a. enter your heroku username
+ b. enter the api key you just copied
+Need to deploy again?
+You should just be able to add, commit and push, and if prompted enter your username and api key again
+
 
 Live link: https://battleship80s.herokuapp.com/
 
@@ -119,38 +146,9 @@ Due to the nature of the project testing has been conducted throughout its entir
 
 Once at the finished point, limit testing has been conducted by myself, there is currently no reported issues that cause the game to break.
 
-Isuues with heruko, since original deployment, Used a different method to deploy.
+Isuues with heruko, since original deployment, Used a different method to deploy - stated above in alternative way to Deploy
 
-Deploying your app to heroku
-
-1. Login to heroku and enter your details.
-command: heroku login -i
-
-2. Get your app name from heroku.
-command: heroku apps
-
-3. Set the heroku remote. (Replace <app_name> with your actual app name)
-command: ﻿heroku git:remote -a <app_name>
-
-4. Add, commit and push to github
-command: git add . && git commit -m "Deploy to Heroku via CLI"
-
-5. Push to both github and heroku
-command: git push origin main
-command: git push heroku main
-
-
-MFA/2FA enabled?
-1. Click on Account Settings (under the avatar menu)
-2. Scroll down to the API Key section and click Reveal. Copy the key.
-3. Enter the command: heroku_config , and enter your api key you copied when prompted
-4. Complete the steps above, if you see an input box at the top middle of the editor...
-a. enter your heroku username
-b. enter the api key you just copied
-
-Need to deploy again?
-You should just be able to add, commit and push, and if prompted enter your username and api key again.
-
+"There has been a security issue and heroku has disabled the ability to deploy via the dashboard, you will need to deploy via the terminal instead.."
 
 
 ## Validator Testing
@@ -163,10 +161,13 @@ Lighthouse - Not within project scope
 
 ## Bugs
 - When the enter key is press instead of a valid row or column game crashes.
+
 <img width="627" alt="old code" src="https://user-images.githubusercontent.com/92300148/163981020-e9c9ee4f-3877-474d-a2b1-c735d623733b.png">
 
-- Fixed by creating while true statement and using try and except rule.
-<img width="697" alt="Fixed Error" src="https://user-images.githubusercontent.com/92300148/165635694-655afafb-dc95-483b-a960-9a2f0f43fb1f.png">
+- Fixed by creating while true statement and using try and except rule to print the ValueError.
+<img width="731" alt="FIXED CODE" src="https://user-images.githubusercontent.com/92300148/165771847-f7fd67ca-0833-4068-807a-999e61b04b47.png">
+
+<img width="762" alt="Error message" src="https://user-images.githubusercontent.com/92300148/165777226-b11ae248-ffee-410e-b17d-31abaa09a5f2.png">
 
 
 ## Features left to implement
@@ -175,6 +176,19 @@ There are no features left to implement from the initial scope of my project. I 
 - Ship sizes
 - Guess map that records your guesses 
 - Have your own board 
+
+## Technologies Used
+#### Programming Languages
+- Python
+- Git
+
+Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+
+#### Github
+GitHub is used to store the projects code after being pushed from Git.
+
+#### Code Institutes mock terminal
+Code Institute provided a mock terminal for use for the project.
 
 ## Reference
 Credit goes to Garrett Broughton - [YOUTUBE](https://www.youtube.com/watch?v=tF1WRCrd_HQ&t=555s&ab_channel=KnowledgeMavens)
