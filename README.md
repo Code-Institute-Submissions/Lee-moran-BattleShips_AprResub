@@ -105,7 +105,7 @@ Live link: https://battleship80s.herokuapp.com/
 
 
 <img width="742" alt="game" src="https://user-images.githubusercontent.com/92300148/159032604-fb752d8d-1b5d-4ebd-9332-95721413d1a8.png">
-<img width="788" alt="Game 2" src="https://user-images.githubusercontent.com/92300148/159033009-b576263f-b6d6-4ea3-b067-5d572db7b1ac.png">
+<img width="776" alt="game home" src="https://user-images.githubusercontent.com/92300148/165635575-23e8ba18-5034-4ebb-acb7-bb7f4245e9c6.png">
 
 Connect your GitHub repository and deploy as normal.
 
@@ -166,9 +166,10 @@ Lighthouse - Not within project scope
 <img width="627" alt="old code" src="https://user-images.githubusercontent.com/92300148/163981020-e9c9ee4f-3877-474d-a2b1-c735d623733b.png">
 
 - Fixed by creating while true statement and using try and except rule.
-<img width="529" alt="New code" src="https://user-images.githubusercontent.com/92300148/163981097-89e8018f-4fad-4b77-bdc0-93030e814510.png">
+<img width="697" alt="Fixed Error" src="https://user-images.githubusercontent.com/92300148/165635694-655afafb-dc95-483b-a960-9a2f0f43fb1f.png">
 
-## Features left to implement
+
+## Features left to implement
 There are no features left to implement from the initial scope of my project. I do have a few ideas on how to improve on this game and make it more advanced.
 - Placemnet of ships 
 - Ship sizes

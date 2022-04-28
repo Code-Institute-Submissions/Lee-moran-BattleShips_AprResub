@@ -58,6 +58,8 @@ def get_ship_location():
             if row in '123456789':
                 row = int(row) - 1
                 break
+            else:
+                raise ValueError
         except ValueError:
             print('You have entered an Invalid input, Please  enter a number between 1-9')
     while True:
@@ -66,7 +68,9 @@ def get_ship_location():
             if column in 'ABCDEFGHI':
                 column = letters_to_numbers[column]
                 break
-        except KeyError:
+            else:
+                raise ValueError
+        except ValueError:
             print('You have entered an Invalid input, Please  enter a letter between A-I')
     return row, column
 
